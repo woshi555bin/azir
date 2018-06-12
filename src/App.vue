@@ -8,7 +8,6 @@
         <h3>模块</h3>
         <draggable :options="dragOptions">
           <div v-for="widget in widgets" :key="widget.name" class="widget-card" :type="widget.placeholder.type">
-            <i class="iconfont icon-lego"></i>
             <p>{{widget.name}}</p>
           </div>
         </draggable>

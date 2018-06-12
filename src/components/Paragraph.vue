@@ -1,8 +1,6 @@
 <template>
   <div class="paragraph">
-    <h1 :style="{color: themeColor}">{{node.content.title}}</h1>
-    <small v-if="node.config.showSubTitle">{{node.content.subTitle}}</small>
-    <p>{{node.content.detail}}</p>
+    <h1 :style="{color: themeColor}" style="visibility: hidden">{{node.content.title}}</h1>
   </div>
 </template>
 

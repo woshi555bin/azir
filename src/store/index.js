@@ -16,27 +16,40 @@ const store = new Vuex.Store({
     currentPage: {},
     widgets: [
       {
-        name: '一段文字',
+        name: 'loading',
         icon: '',
         placeholder: {
-          type: 'paragraph',
+          type: 'Loading',
           content: {
-            title: '标题',
-            subTitle: '小标题',
-            detail: '内容。。。'
+            title: '',
+            subTitle: '',
+            detail: ''
           },
           config: {}
         }
       },
       {
-        name: '一段',
+        name: '头部',
         icon: '',
         placeholder: {
-          type: 'pa',
+          type: 'Head',
           content: {
-            title: '王斌',
-            subTitle: '小标题',
-            detail: '模拟'
+            title: '',
+            subTitle: '',
+            detail: ''
+          },
+          config: {}
+        }
+      },
+      {
+        name: 'hello',
+        icon: '',
+        placeholder: {
+          type: 'HelloWorld',
+          content: {
+            title: '',
+            subTitle: '',
+            detail: ''
           },
           config: {}
         }
@@ -59,7 +72,10 @@ const store = new Vuex.Store({
       if (widget) {
         const editType = 'edit-' + widget.placeholder.type;
         store.commit('incrementGid');
-        section.splice(newIndex, 0, { ...widget.placeholder, editType, id: gid })
+        console.log(store.state);
+        //添加数组
+        section.splice(newIndex, 0, { ...widget.placeholder, editType, id: gid });
+        console.log(store.state);
       }
     },
     incrementGid (state) {

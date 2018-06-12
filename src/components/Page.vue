@@ -1,6 +1,5 @@
 <template>
   <div class="page">
-    page
     <slot></slot>
   </div>
 </template>

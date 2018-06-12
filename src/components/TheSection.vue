@@ -35,15 +35,11 @@
           this.sortWidget({array: this.node.children, oldIndex, newIndex})
         }
       },
-
       onAdd ({ item, newIndex }) {
         console.log(item);
+        console.log(this.node.children);
         const widgetType = item.getAttribute('type');
         item.parentElement.removeChild(item);
-        console.log(item.parentElement);
-        console.log(newIndex);
-        console.log(this.node.children);
-
         this.addWidget({ section: this.node.children, widgetType, newIndex })
       }
     }

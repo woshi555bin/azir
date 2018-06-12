@@ -10,6 +10,9 @@
   import Pa from './Pa.vue'
   import Paragraph from './Paragraph.vue'
   import TheSection from './TheSection.vue'
+  import Head from './Head'
+  import HelloWorld from './HelloWorld'
+  import Loading from './Loading'
   export default {
     name: 'render',
     props: ['node', 'themeColor'],
@@ -17,7 +20,10 @@
       Page,
       TheSection,
       Paragraph,
-      Pa
+      Pa,
+      Head,
+      HelloWorld,
+      Loading
     }
   }
 </script>
